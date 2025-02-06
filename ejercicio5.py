@@ -7,15 +7,9 @@
 
 n=int(input("Introduce una lista de números: "))
 def contar_digitos(n):
-    resto=0
-    contador=0
-    if n==0:
-        return 0
-    else:
-        resto=n/10
-        contador+=contador
-    return contador
-
+    if n<10:
+        return 1
+    return 1 + contar_digitos(n/10)
 
 resultado=contar_digitos(n)
 print(resultado)
